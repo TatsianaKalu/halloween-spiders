@@ -1,0 +1,72 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    max-width: 1920px;
+    height: 500px;
+    position: relative;
+    background-image: url('./img/haloween.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px;
+    animation: header-animation 4s forwards;
+    overflow-x: hidden;
+}
+
+.header-title {
+    color: white
+}
+
+.header-spider {
+      
+    width: 400px;
+    height: 200px;
+    
+           
+}
+
+.spider1 {
+    position: absolute;
+    top: 150px;
+    left: -150%; 
+    animation: spider-animation-left 2.5s;
+}
+
+.spider2 {
+   position: absolute;
+   top: 0;
+   right: 100px;
+   transform: rotateY(180deg);
+   
+   animation: spider-animation-right 5s;
+  
+}
+
+@keyframes header-animation {
+    0% {
+        background-position-y: -50%;
+    }
+
+    100% {
+        background-position-y: 80%;
+    }
+    
+}
+
+@keyframes spider-animation-left {
+    0% { left: 100px;}
+    100% {left: -200px}
+    
+}
+
+@keyframes spider-animation-right {
+    0% { top: 100px;
+        right: 100px;}
+    
+    100% {right: -200px}
+   
+    
+}
